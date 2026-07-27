@@ -22,3 +22,7 @@ spring:
 logging:
   level:
     org.hibernate.SQL: INFO
+
+rsa:
+  private-key: classpath:keys/private.pem
+  public-key: classpath:keys/public.pem
