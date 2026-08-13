@@ -26,8 +26,8 @@ public class Auth {
     @Column(nullable = false, unique = true, updatable = false)
     private UUID hid;
 
-    @Column(nullable = false, updatable = true, length = 255)
-    private String email;
+    @Column(nullable = false, updatable = true, length = 10)
+    private String phoneNumber;
 
     @Column
     private String passwordHash;

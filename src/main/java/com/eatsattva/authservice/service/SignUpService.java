@@ -26,7 +26,7 @@ public class SignUpService {
 
         Auth auth = Auth.builder()
                         .hid(UUID.randomUUID())
-                        .email(signupRequest.email())
+                        .phoneNumber(signupRequest.phoneNumber())
                         .passwordHash(hash)
                         .role(Role.CUSTOMER)
                         .enabled(true)
@@ -38,7 +38,7 @@ public class SignUpService {
         auth = authRepo.save(auth);
 
         return SignUpResponse.builder()
-                .email(auth.getEmail())
+                .email(auth.getPhoneNumber())
                 .emailVerified(auth.isEmailVerified())
                 .message("User registered Successfully").build();
     }

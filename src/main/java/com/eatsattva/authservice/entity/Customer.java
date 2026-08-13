@@ -16,7 +16,7 @@ public class Customer {
     UUID publicId;
     String firstName;
     String lastName;
-    String email;
+    String phoneNumber;
     String password_hash;
     Role role;
     Boolean enabled;

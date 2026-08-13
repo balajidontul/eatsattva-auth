@@ -16,11 +16,11 @@ import java.util.Base64;
 
 public final class PemKeyLoader {
 
-    private PemKeyLoader() {
+    private PemKeyLoader(){
 
     }
 
-    public static RSAPrivateKey readPrivateKey(Resource resource) {
+    public static RSAPrivateKey readPrivateKey(Resource resource)  {
         String key = null;
         try {
             key = new String(resource.getInputStream().readAllBytes(), StandardCharsets.UTF_8);
@@ -74,4 +74,4 @@ public final class PemKeyLoader {
             throw new RuntimeException(e);
         }
     }
-}
+    }

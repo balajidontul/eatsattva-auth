@@ -7,6 +7,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.context.properties.ConfigurationPropertiesScan;
 import org.springframework.context.annotation.Bean;
 
+import java.security.interfaces.RSAPrivateKey;
+import java.security.interfaces.RSAPublicKey;
+
 @SpringBootApplication
 @ConfigurationPropertiesScan
 public class eatsattvaauthserviceApplication {
@@ -16,10 +19,10 @@ public class eatsattvaauthserviceApplication {
     }
 
     @Bean
-    CommandLineRunner test(RsaKeyProperties properties) {
+    CommandLineRunner test(RSAPrivateKey rsaPrivateKey, RSAPublicKey rSAPublicKey) {
         return args -> {
-            System.out.println(properties.privateKey());
-            System.out.println(properties.publicKey());
+            System.out.println(rSAPublicKey.getAlgorithm());
+            System.out.println(rsaPrivateKey.getAlgorithm());
         };
     }
 

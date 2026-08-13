@@ -1,7 +1,8 @@
 package com.eatsattva.authservice.dto.response;
 
-public class LoginResponse {
-
-    String accessToken;
-    String expiresIn;
+public record LoginResponse(
+        String accessToken,
+        String tokenType,
+        long expiresIn
+) {
 }
